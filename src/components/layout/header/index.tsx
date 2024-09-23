@@ -1,8 +1,6 @@
 import Search from '../../search';
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <div>
         <Search/>
