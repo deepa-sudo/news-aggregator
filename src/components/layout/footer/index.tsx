@@ -1,5 +1,5 @@
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <div>
         This is footer
