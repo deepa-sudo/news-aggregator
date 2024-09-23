@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.css'
 
 const Search = () => {
   const [text, setText] = useState("");
 
-  const onSubmit = evt => {
+  const onSubmit = (evt: any) => {
     evt.preventDefault();
     if (text === "") {
       alert("Please enter something!");
@@ -27,7 +27,7 @@ const Search = () => {
         })
   },[])
 
-  const onChange = evt => setText(evt.target.value);
+  const onChange = (evt: any) => setText(evt.target.value);
 
   return (
     <div className='w-100 maximum-width bg-default'>
