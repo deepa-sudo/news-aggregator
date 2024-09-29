@@ -14,23 +14,23 @@ const Search = () => {
     }
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     let url = 'https://newsapi.org/v2/top-headlines?' +
-          'sources=bbc-news&' +
-          'apiKey=c62e8a3d7dba41fe9d68370276812e00';
+      'sources=bbc-news&' +
+      'apiKey=c62e8a3d7dba41fe9d68370276812e00';
 
     let req = new Request(url);
 
     fetch(req)
-        .then(function(response) {
-            console.log(response.json());
-        })
-  },[])
+      .then(function (response) {
+        console.log(response.json());
+      })
+  }, [])
 
   const onChange = (evt: any) => setText(evt.target.value);
 
   return (
-    <div className='w-100 maximum-width bg-default'>
+    <div className='w-100 bg-default'>
       <form onSubmit={onSubmit} className="p-10 flex justify-center">
         <input
           type="text"
